@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.Scanner;
 
 //Program:	MazeNavigator.java
 //Course:	COSC470
@@ -179,10 +178,13 @@ public class MazeNavigator {
      while (shortestPathFound==false){   //this loop reiterates until all paths have been explored
          
          if(userPrompted){    //if the user wants to prompt each advance, this takes care of that
-         KeyboardInputClass keystroke = new KeyboardInputClass();
-         String key = keystroke.getKeyboardInput("");
-         
-         if (key.isEmpty()){   //looks for keystrokes to print next move
+         Scanner scanner = new Scanner(System.in);
+         //KeyboardInputClass keystroke = new KeyboardInputClass();
+         //String key = keystroke.getKeyboardInput("");
+         String userInput = scanner.nextLine();
+
+
+         if (userInput.isEmpty()){   //looks for keystrokes to print next move
             for (int rows =0; rows<numberOfRows; rows++)
             { 
                 for (int columns =0; columns < numberOfColumns; columns++)
