@@ -8,7 +8,7 @@ import java.util.*;
 //              the shortest path out of the maze, displaying the results.
 //Author:	Philip Zeiger
 //Date:	        3/3/2014
-//Revised:      7/10/2021
+//Revised:      7/13/2021
 //Language:	Java
 //IDE:		NetBeans 7.4
 //Notes:	
@@ -179,8 +179,6 @@ public class MazeNavigator {
          
          if(userPrompted){    //if the user wants to prompt each advance, this takes care of that
          Scanner scanner = new Scanner(System.in);
-         //KeyboardInputClass keystroke = new KeyboardInputClass();
-         //String key = keystroke.getKeyboardInput("");
          String userInput = scanner.nextLine();
 
 
@@ -199,6 +197,7 @@ public class MazeNavigator {
             System.out.println("");           
             } 
           }
+          scanner.close();
           }
             
          else if(stepByStep){  //prints after each move in the maze if user says to
