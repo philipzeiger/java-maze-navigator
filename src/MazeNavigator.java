@@ -8,7 +8,8 @@ import java.util.Scanner;
 //              search algorithm to search all possible paths to an exit. It compares these paths and determines 
 //              the shortest path out of the maze, displaying the results.
 //Author:	Philip Zeiger
-//Revised:	3/3/2014
+//Date:	        3/3/2014
+//Revised:      7/10/2021
 //Language:	Java
 //IDE:		NetBeans 7.4
 //Notes:	
@@ -23,7 +24,7 @@ public class MazeNavigator {
 	//Parameters:	None.
 	//Returns:      Nothing.
 	//Throws:       Nothing.
-	//Calls:	populateMaze, navigateMaze, buildSolution, KeyboardInputClass, TextFileClass
+	//Calls:	populateMaze, navigateMaze, buildSolution, TextFileClass
     
     public static void main(String[] args) {
     
@@ -50,9 +51,7 @@ public class MazeNavigator {
     if(stepByStep){         //checking if user wants keyboard-prompted step-by-step display
         System.out.println("Step-by-step automatically (1), or prompted by keystroke (2)?");
         userInput = scanner.nextLine();
-        
-        //userInput = input.getKeyboardInput("Step-by-step automatically (1), or prompted by keystroke (2)?");
-    
+            
     if(userInput.equals("2"))
         userPrompted = true;
     }
